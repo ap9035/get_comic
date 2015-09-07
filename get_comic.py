@@ -59,12 +59,13 @@ def get_comic(url,dir_name):
 		return
 	
 	page_list=	get_page_list(content)
-	iter=1
+	
 	for i in page_list:
 		url="http://web.cartoonad.com/comic/"+i
 		p=multiprocessing.Process(target=store_pic,args=(url,dir_name))
 		p.start()
-		iter+=1
+	p.join()
+		
 
 def main():
 	url=sys.argv[1]
