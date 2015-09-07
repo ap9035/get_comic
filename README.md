@@ -1,1 +1,3 @@
 # get_comic
+下載漫畫全本
+使用範例：python get_all.py http://www.cartoonmad.com/comic/1146.html 戰國妖狐 
